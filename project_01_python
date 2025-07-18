@@ -1,0 +1,125 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMctAnGjM3Fq6VOoiTkn6z5",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Ashish2019New/online-Test/blob/master/project_01_python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "JwJ6zddkXvQ9"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "8610b180",
+        "outputId": "8814bc99-3543-49d3-cd66-8fa37fe58042"
+      },
+      "source": [
+        "# Initialize task lists\n",
+        "checklist = []\n",
+        "completed_tasks = []\n",
+        "incomplete_tasks = []\n",
+        "\n",
+        "# Populate checklist with example tasks\n",
+        "checklist.append(\"Grocery shopping\")\n",
+        "checklist.append(\"Finish report\")\n",
+        "checklist.append(\"Go for a run\")\n",
+        "checklist.append(\"Read a book\")\n",
+        "\n",
+        "print(\"Your daily checklist:\")\n",
+        "for task in checklist:\n",
+        "    print(f\"- {task}\")\n",
+        "\n",
+        "# Review tasks and organize them\n",
+        "print(\"\\nReview your tasks. Mark completed tasks with 'c' and incomplete tasks with 'i':\")\n",
+        "for task in checklist:\n",
+        "    while True:\n",
+        "        response = input(f\"Did you complete '{task}'? (c/i): \").lower()\n",
+        "        if response == 'c':\n",
+        "            completed_tasks.append(task)\n",
+        "            break\n",
+        "        elif response == 'i':\n",
+        "            incomplete_tasks.append(task)\n",
+        "            break\n",
+        "        else:\n",
+        "            print(\"Invalid input. Please enter 'c' for completed or 'i' for incomplete.\")\n",
+        "\n",
+        "# Display results\n",
+        "print(\"\\n--- Daily Task Summary ---\")\n",
+        "print(\"\\nCompleted Tasks:\")\n",
+        "if completed_tasks:\n",
+        "    for task in completed_tasks:\n",
+        "        print(f\"- {task}\")\n",
+        "else:\n",
+        "    print(\"No tasks completed today.\")\n",
+        "\n",
+        "print(\"\\nIncomplete Tasks:\")\n",
+        "if incomplete_tasks:\n",
+        "    for task in incomplete_tasks:\n",
+        "        print(f\"- {task}\")\n",
+        "else:\n",
+        "    print(\"All tasks completed today!\")"
+      ],
+      "execution_count": 1,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Your daily checklist:\n",
+            "- Grocery shopping\n",
+            "- Finish report\n",
+            "- Go for a run\n",
+            "- Read a book\n",
+            "\n",
+            "Review your tasks. Mark completed tasks with 'c' and incomplete tasks with 'i':\n",
+            "Did you complete 'Grocery shopping'? (c/i): c\n",
+            "Did you complete 'Finish report'? (c/i): i\n",
+            "Did you complete 'Go for a run'? (c/i): i\n",
+            "Did you complete 'Read a book'? (c/i): c\n",
+            "\n",
+            "--- Daily Task Summary ---\n",
+            "\n",
+            "Completed Tasks:\n",
+            "- Grocery shopping\n",
+            "- Read a book\n",
+            "\n",
+            "Incomplete Tasks:\n",
+            "- Finish report\n",
+            "- Go for a run\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
